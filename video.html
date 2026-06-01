@@ -4,82 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Video & Moving Image — Jinyoung Park</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="va">
 <nav>
-  <a class="nav-logo" href="index.html">Jinyoung Park</a>
-  <ul class="nav-links">
-    <li><a href="film.html">Film</a></li>
-    <li><a href="video.html" class="active">Video</a></li>
-    <li><a href="projection.html">Projection</a></li>
-    <li><a href="print.html">Print</a></li>
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+  <a href="index.html" class="nav-logo" aria-label="Home"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 13L14 3L25 13V25H18V18H10V25H3V13Z" fill="#f5e50a"/></svg></a>
+  <div class="nav-links">
+    <a href="film.html">Film</a>
+    <a href="video.html" class="active">Video</a>
+    <a href="projection.html">Projection</a>
+    <a href="print.html">Print</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
-
-<div class="page-header">
-  <div class="page-header-left">
-    <a class="page-back" href="index.html">← Back</a>
-    <div class="page-num">02</div>
-    <h1 class="page-title">Video &amp;<br>Moving Image</h1>
+<div class="page active">
+  <div class="sub-header">
+    <div>
+      <a href="index.html" class="sub-back">← Back</a>
+      <div class="sub-num">02</div>
+      <div class="sub-title">Video &amp;<br>Moving Image</div>
+    </div>
+    <div class="sub-desc">Documentary, short form, and experimental video. Shot on Blackmagic and Sony, edited in Premiere Pro.</div>
   </div>
-  <p class="page-desc">Documentary, short form, and experimental video. Shot on Blackmagic and Sony, edited in Premiere Pro.</p>
-</div>
-
-<div class="projects-grid">
-  <div class="project-card">
-    <p class="proj-role">Documentary — Videographer / Editor</p>
-    <h2 class="proj-title">Volunteer Expo 2024</h2>
-    <p class="proj-sub">City of Melbourne — International Students Channel</p>
-    <p class="proj-body">Short documentary for the City of Melbourne Volunteer Expo, connecting international students with community organisations. Published on the City's official social channels.</p>
-    <div class="proj-footer">
-      <span class="proj-tools">Blackmagic · Premiere Pro</span>
-      <a class="proj-link" href="https://www.youtube.com/watch?v=Es0B-T7PhfY" target="_blank" rel="noopener">Watch ↗</a>
+  <div class="proj-grid">
+    <div class="proj-card">
+      <div class="proj-role">Documentary — Videographer / Editor</div>
+      <div class="proj-title">Volunteer Expo 2024</div>
+      <div class="proj-sub">City of Melbourne — International Students Channel</div>
+      <div class="proj-body">Short documentary for the City of Melbourne Volunteer Expo. Published on the City's official social channels.</div>
+      <div class="proj-footer"><span class="proj-tools">Blackmagic · Premiere Pro</span><a class="proj-link" href="https://www.youtube.com/watch?v=Es0B-T7PhfY" target="_blank">Watch ↗</a></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-role">Video Poetry — Director / Editor</div>
+      <div class="proj-title">Tea Bag</div>
+      <div class="proj-sub">Experimental short — video poetry about love</div>
+      <div class="proj-body">A video poem exploring love through quiet, intimate imagery. Uses rhythm and juxtaposition to let feeling carry the narrative.</div>
+      <div class="proj-footer"><span class="proj-tools">Sony a6500 · Premiere Pro</span><a class="proj-link" href="https://www.youtube.com/watch?v=B-AWzWjnDQ4" target="_blank">Watch ↗</a></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-role">Music Video — Cinematographer / Editor</div>
+      <div class="proj-title">Sunsetz</div>
+      <div class="proj-sub">Short-form music video</div>
+      <div class="proj-body">A visual companion piece exploring light and movement in short form, shot on Blackmagic.</div>
+      <div class="proj-footer"><span class="proj-tools">Blackmagic · Premiere Pro</span><a class="proj-link" href="https://youtube.com/shorts/t4ZclAU_DKo" target="_blank">Watch ↗</a></div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-role">Short Film — Cinematographer / Editor</div>
+      <div class="proj-title">Acid Brass</div>
+      <div class="proj-sub">Short film</div>
+      <div class="proj-body">A short film exploring texture and sound. Shot on Blackmagic, edited in Premiere Pro.</div>
+      <div class="proj-footer"><span class="proj-tools">Blackmagic · Premiere Pro</span><a class="proj-link" href="https://www.youtube.com/watch?v=DnJVg5Oc2r0" target="_blank">Watch ↗</a></div>
     </div>
   </div>
-  <div class="project-card">
-    <p class="proj-role">Video Poetry — Director / Editor</p>
-    <h2 class="proj-title">Tea Bag</h2>
-    <p class="proj-sub">Experimental short — video poetry about love</p>
-    <p class="proj-body">A video poem exploring love through quiet, intimate imagery. Uses rhythm and juxtaposition to let feeling carry the narrative.</p>
-    <div class="proj-footer">
-      <span class="proj-tools">Sony a6500 · Premiere Pro</span>
-      <a class="proj-link" href="https://www.youtube.com/watch?v=B-AWzWjnDQ4" target="_blank" rel="noopener">Watch ↗</a>
+  <div class="page-footer">
+    <a href="index.html" class="page-footer-logo"><svg width="22" height="22" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 13L14 3L25 13V25H18V18H10V25H3V13Z" fill="#f5e50a"/></svg></a>
+    <div class="page-footer-nav">
+      <a href="film.html">← Film</a>
+      <a href="projection.html">Projection →</a>
+      <a href="print.html">Print →</a>
     </div>
-  </div>
-  <div class="project-card">
-    <p class="proj-role">Music Video — Cinematographer / Editor</p>
-    <h2 class="proj-title">Sunsetz</h2>
-    <p class="proj-sub">Short-form music video</p>
-    <p class="proj-body">A visual companion piece exploring light and movement in short form, shot on Blackmagic.</p>
-    <div class="proj-footer">
-      <span class="proj-tools">Blackmagic · Premiere Pro</span>
-      <a class="proj-link" href="https://youtube.com/shorts/t4ZclAU_DKo" target="_blank" rel="noopener">Watch ↗</a>
-    </div>
-  </div>
-  <div class="project-card">
-    <p class="proj-role">Short Film — Cinematographer / Editor</p>
-    <h2 class="proj-title">Acid Brass</h2>
-    <p class="proj-sub">Short film</p>
-    <p class="proj-body">A short film exploring texture and sound. Shot on Blackmagic, edited in Premiere Pro.</p>
-    <div class="proj-footer">
-      <span class="proj-tools">Blackmagic · Premiere Pro</span>
-      <a class="proj-link" href="https://www.youtube.com/watch?v=DnJVg5Oc2r0" target="_blank" rel="noopener">Watch ↗</a>
-    </div>
-  </div>
-</div>
-
-<div class="page-footer">
-  <a class="page-footer-home" href="index.html">Jinyoung Park</a>
-  <div class="page-footer-nav">
-    <a href="film.html">← Film</a>
-    <a href="projection.html">Projection →</a>
-    <a href="print.html">Print →</a>
   </div>
 </div>
 </body>

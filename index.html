@@ -4,216 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jinyoung Park — Media Artist</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --bg: #ffffff; --ink: #0d0d0d; --sub: #444444; --muted: #888888;
-  --border: #e5e5e5; --tag-bg: #f2f2f2; --font: 'Inter', system-ui, sans-serif;
-}
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: var(--bg); border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 48px; height: 56px;
-}
-.nav-logo { font-size: 15px; font-weight: 700; text-decoration: none; color: var(--ink); }
-.nav-links { display: flex; gap: 4px; list-style: none; }
-.nav-links a {
-  font-size: 14px; font-weight: 500; text-decoration: none;
-  color: var(--muted); padding: 6px 12px; border-radius: 6px;
-  transition: color 0.15s, background 0.15s;
-}
-.nav-links a:hover { color: var(--ink); background: var(--tag-bg); }
-
-/* HERO */
-#hero {
-  padding-top: 56px; min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 1fr;
-  border-bottom: 1px solid var(--border);
-}
-.hero-left {
-  padding: 80px 56px;
-  border-right: 1px solid var(--border);
-  display: flex; flex-direction: column; justify-content: space-between;
-}
-.hero-location { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; }
-.hero-name { font-size: clamp(52px, 6.5vw, 84px); font-weight: 800; line-height: 1.0; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 32px; }
-.hero-bio { font-size: 17px; line-height: 1.8; color: var(--sub); max-width: 400px; margin-bottom: 40px; }
-.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag { background: var(--tag-bg); border-radius: 100px; padding: 6px 16px; font-size: 13px; font-weight: 500; color: var(--sub); }
-.hero-right { position: relative; overflow: hidden; background: #e8e8e8; }
-.hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-.hero-scroll { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 10px; margin-top: 56px; }
-.hero-scroll::before { content: ''; width: 20px; height: 1.5px; background: var(--muted); display: block; }
-
-/* WORK INDEX */
-#work-index { padding: 80px 56px; border-bottom: 1px solid var(--border); }
-.work-index-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; display: block; }
-.work-index-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-.work-index-item {
-  background: var(--bg); padding: 28px 32px;
-  text-decoration: none; color: inherit;
-  display: flex; flex-direction: column; justify-content: space-between;
-  gap: 24px; transition: background 0.15s;
-}
-.work-index-item:hover { background: var(--tag-bg); }
-.wi-num { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
-.wi-title { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.2; }
-.wi-count { font-size: 12px; color: var(--muted); font-weight: 500; }
-.wi-arrow { font-size: 18px; color: var(--border); align-self: flex-end; transition: color 0.15s; }
-.work-index-item:hover .wi-arrow { color: var(--ink); }
-
-/* ABOUT */
-#about { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--border); }
-.about-left { padding: 80px 56px; border-right: 1px solid var(--border); }
-.about-heading { font-size: clamp(30px, 3.5vw, 44px); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 28px; }
-.about-body { font-size: 16px; line-height: 1.85; color: var(--sub); margin-bottom: 20px; }
-.about-right { padding: 80px 56px; }
-.section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; display: block; }
-.skills-list { list-style: none; margin-bottom: 48px; }
-.skills-list li { font-size: 15px; font-weight: 500; color: var(--ink); padding: 13px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-.skills-list li span { font-size: 13px; font-weight: 400; color: var(--muted); }
-.edu-block { padding-top: 32px; border-top: 1px solid var(--border); }
-.edu-title { font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
-.edu-sub { font-size: 14px; color: var(--muted); }
-
-/* CONTACT */
-#contact { display: grid; grid-template-columns: 1fr 1fr; }
-.contact-left { padding: 80px 56px; border-right: 1px solid var(--border); }
-.contact-heading { font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 40px; }
-.contact-line { display: flex; align-items: center; gap: 24px; padding: 16px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: padding-left 0.15s; }
-.contact-line:hover { padding-left: 8px; }
-.c-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); min-width: 60px; }
-.c-value { font-size: 15px; font-weight: 500; color: var(--ink); }
-.contact-right { padding: 80px 56px; display: flex; flex-direction: column; justify-content: flex-end; }
-.footer-name { font-size: clamp(48px, 7vw, 88px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; color: var(--tag-bg); user-select: none; }
-.footer-copy { font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 28px; }
-
-@media (max-width: 768px) {
-  nav { padding: 0 20px; }
-  .nav-links { display: none; }
-  #hero { grid-template-columns: 1fr; }
-  .hero-left { padding: 40px 24px; border-right: none; border-bottom: 1px solid var(--border); }
-  .hero-right { min-height: 280px; }
-  #work-index { padding: 48px 24px; }
-  #about { grid-template-columns: 1fr; }
-  .about-left { padding: 48px 24px; border-right: none; border-bottom: 1px solid var(--border); }
-  .about-right { padding: 48px 24px; }
-  #contact { grid-template-columns: 1fr; }
-  .contact-left { padding: 48px 24px; border-right: none; border-bottom: 1px solid var(--border); }
-  .contact-right { padding: 48px 24px; }
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body class="va">
 <nav>
-  <a class="nav-logo" href="index.html">Jinyoung Park</a>
-  <ul class="nav-links">
-    <li><a href="film.html">Film</a></li>
-    <li><a href="video.html">Video</a></li>
-    <li><a href="projection.html">Projection</a></li>
-    <li><a href="print.html">Print</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <a href="index.html" class="nav-logo" aria-label="Home"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 13L14 3L25 13V25H18V18H10V25H3V13Z" fill="#f5e50a"/></svg></a>
+  <div class="nav-links">
+    <a href="film.html">Film</a>
+    <a href="video.html">Video</a>
+    <a href="projection.html">Projection</a>
+    <a href="print.html">Print</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
-
-<section id="hero">
-  <div class="hero-left">
-    <div>
-      <p class="hero-location">Media Artist · Melbourne, VIC</p>
-      <h1 class="hero-name">Jinyoung<br>Park</h1>
-      <p class="hero-bio">Digital content creator and media artist. Experience in short film, live TV, photography, projection art, and app development. RMIT University, 2023.</p>
-      <div class="hero-tags">
-        <span class="tag">Film</span>
-        <span class="tag">Photography</span>
-        <span class="tag">Projection Art</span>
-        <span class="tag">Production Design</span>
-        <span class="tag">Video</span>
-        <span class="tag">App Dev</span>
-      </div>
-    </div>
-    <p class="hero-scroll">Selected work below</p>
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-eyebrow">Media Artist · Melbourne, VIC</div>
+    <div class="hero-name">Jinyoung<br>Park</div>
+    <div class="hero-bio">Digital content creator and media artist. Short film, live TV production, photography, projection art, and app development. RMIT University, 2023.</div>
   </div>
-  <div class="hero-right">
-    <img src="https://jinntoniccom.wordpress.com/wp-content/uploads/2023/07/7b02b604-3e60-453e-ba61-1b68483b7dd3-3.jpg" alt="Jinyoung Park" onerror="this.style.display='none'">
+  <div class="home-grid">
+    <div class="g-cell yel" onclick="location.href='film.html'"><div class="g-num">01</div><div><div class="g-title">Fotoautomat</div><div class="g-type">Film · 2023</div></div></div>
+    <div class="g-cell blk" onclick="location.href='video.html'"><div class="g-num">02</div><div><div class="g-title">Tea Bag</div><div class="g-type">Video Poetry</div></div></div>
+    <div class="g-cell blk" onclick="location.href='video.html'"><div class="g-num">03</div><div><div class="g-title">Volunteer Expo</div><div class="g-type">Documentary</div></div></div>
+    <div class="g-cell yel" onclick="location.href='projection.html'"><div class="g-num">04</div><div><div class="g-title">Projection Art</div><div class="g-type">Installation</div></div></div>
+    <div class="g-cell blk" onclick="location.href='print.html'"><div class="g-num">05</div><div><div class="g-title">Collingwords</div><div class="g-type">Zine Design</div></div></div>
+    <div class="g-cell yel" onclick="location.href='film.html'"><div class="g-num">06</div><div><div class="g-title">Cutting Room</div><div class="g-type">Live TV</div></div></div>
+    <div class="g-cell blk"><div class="g-num">07</div><div><div class="g-title">Add Title</div><div class="g-type">Add Type</div></div></div>
+    <div class="g-cell yel"><div class="g-num">08</div><div><div class="g-title">Add Title</div><div class="g-type">Add Type</div></div></div>
   </div>
-</section>
-
-<section id="work-index">
-  <span class="work-index-label">Work</span>
-  <div class="work-index-grid">
-    <a class="work-index-item" href="film.html">
-      <div><div class="wi-num">01</div><div class="wi-title">Film &amp; Production</div></div>
-      <div><div class="wi-count">2 projects</div><div class="wi-arrow">→</div></div>
-    </a>
-    <a class="work-index-item" href="video.html">
-      <div><div class="wi-num">02</div><div class="wi-title">Video &amp; Moving Image</div></div>
-      <div><div class="wi-count">4 projects</div><div class="wi-arrow">→</div></div>
-    </a>
-    <a class="work-index-item" href="projection.html">
-      <div><div class="wi-num">03</div><div class="wi-title">Projection Art</div></div>
-      <div><div class="wi-count">1 project</div><div class="wi-arrow">→</div></div>
-    </a>
-    <a class="work-index-item" href="print.html">
-      <div><div class="wi-num">04</div><div class="wi-title">Print &amp; Design</div></div>
-      <div><div class="wi-count">2 projects</div><div class="wi-arrow">→</div></div>
-    </a>
-  </div>
-</section>
-
-<section id="about">
-  <div class="about-left">
-    <h2 class="about-heading">About the work</h2>
-    <p class="about-body">Visual language is how I communicate with the world. As a creator full of inspiration, I have explored many different forms of media — always learning, always developing.</p>
-    <p class="about-body">From production design on festival-selected short films, to live TV camera work, to community zines and projection installations — I am drawn to work at the intersection of story and image.</p>
-    <p class="about-body">The world is full of surprises. I stay curious, learning from others and sharing my passion.</p>
-  </div>
-  <div class="about-right">
-    <span class="section-label">Disciplines</span>
-    <ul class="skills-list">
-      <li>Short Film Production <span>Director / Production Designer</span></li>
-      <li>Live TV <span>Camera &amp; Lighting</span></li>
-      <li>Photography <span>Sony a6500 · Blackmagic</span></li>
-      <li>Projection Art <span>Installation</span></li>
-      <li>Video Editing <span>Premiere Pro</span></li>
-      <li>Graphic &amp; Print Design <span>Zine · Editorial</span></li>
-      <li>App Development <span>Digital Media</span></li>
-    </ul>
-    <div class="edu-block">
-      <span class="section-label">Education</span>
-      <p class="edu-title">Bachelor of Communication (Media)</p>
-      <p class="edu-sub">RMIT University, Melbourne — 2023</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="contact-left">
-    <h2 class="contact-heading">Let's work together</h2>
-    <a class="contact-line" href="mailto:kwa06155@gmail.com">
-      <span class="c-label">Email</span><span class="c-value">kwa06155@gmail.com</span>
-    </a>
-    <a class="contact-line" href="tel:+61412436858">
-      <span class="c-label">Phone</span><span class="c-value">0412 436 858</span>
-    </a>
-    <div class="contact-line">
-      <span class="c-label">Based</span><span class="c-value">Melbourne, Victoria</span>
-    </div>
-  </div>
-  <div class="contact-right">
-    <div class="footer-name">Jinyoung<br>Park</div>
-    <p class="footer-copy">Media Artist · Melbourne · © 2026</p>
-  </div>
-</section>
-
+</div>
 </body>
 </html>
